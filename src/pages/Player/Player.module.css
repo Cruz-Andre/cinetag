@@ -1,3 +1,38 @@
+.player {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
 iframe {
-  height: 80vh;
+  width: 1280px;
+  height: 720px;
+}
+
+@media (max-width: 1279px) {
+  iframe {
+    width: 854px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 853px) {
+  iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 639px) {
+  iframe {
+    width: 426px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 425px) {
+  iframe {
+    width: 350px;
+    height: 240px;
+  }
 }

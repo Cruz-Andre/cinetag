@@ -30,7 +30,7 @@ export default function Player() {
       <Titulo>
         Player
       </Titulo>
-      <section className={styles.container}>
+      <div className={styles.player}>
         <iframe
           width="100%"
           height="100%"
@@ -41,7 +41,7 @@ export default function Player() {
           allowFullScreen
         >
         </iframe>
-      </section>
+      </div>
     </>
   )
 }
