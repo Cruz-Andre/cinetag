@@ -13,7 +13,7 @@
 - ...
 
 ## TODO
-- Ajustar a responsividade mobile
+~~- Ajustar a responsividade mobile~~ :white_check_mark:
 
 ### Vercel Pages: em breve
 
