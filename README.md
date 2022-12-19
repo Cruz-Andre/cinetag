@@ -6,7 +6,14 @@
 - React Router
 - Hooks
 - Context
-- Mock e consumo de API
+- Mock e consumo de API (db.json em um repositório do GitHub e usar o My Json Server para hospedar o protótipo de API)
+
+## Adições além do curso
+- Componente de Loading
+- ...
+
+## TODO
+- Ajustar a responsividade mobile
 
 ### Vercel Pages: em breve
 

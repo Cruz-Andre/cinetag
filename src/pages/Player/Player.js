@@ -1,21 +1,27 @@
 import Banner from 'components/Banner/Banner'
 import Titulo from 'components/Titulo/Titulo'
 import { useParams } from 'react-router-dom'
-import styles from './Player.module.css'
+import { useEffect, useState } from 'react'
 
-import videos from 'json/db.json'
-import Pag404 from 'pages/Pag404/Pag404'
+import styles from './Player.module.css'
+import Loading from 'components/Loading/Loading'
 
 export default function Player() {
 
+  const [video, setVideo] = useState()
+
   const parametrosDaURL = useParams()
 
-  const video = videos.find(video => {
-    return video.id === Number(parametrosDaURL.id)
-  })
+  useEffect(() => {
+    fetch(`https://my-json-server.typicode.com/Cruz-Andre/cinetag-api/videos?id=${parametrosDaURL.id}`)
+      .then(resposta => resposta.json())
+      .then(dados => {
+        setVideo(...dados)
+      })
+  }, [parametrosDaURL])
 
   if (!video) {
-    return <Pag404 />
+    return <Loading />
   }
 
   return (
@@ -39,3 +45,19 @@ export default function Player() {
     </>
   )
 }
+
+/* Exemplo com  async await
+
+  useEffect(() => {
+    async function recebeVideo(id) {
+      var recebendoVideo = await fetch(`https://my-json-server.typicode.com/Cruz-Andre/cinetag-api/videos/${id}`)
+      var videoRecebido = await recebendoVideo.json()
+      
+      console.log(videoRecebido.link)
+      return setVideo(videoRecebido)
+    }
+    recebeVideo(Number(parametrosDaURL.id))
+
+  }, [parametrosDaURL])
+
+*/

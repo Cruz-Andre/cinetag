@@ -1,7 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
 export const FavoritosContext = createContext()
-
 FavoritosContext.displayName = "Favoritos"
 
 export default function FavoritosProvider({children}) {
