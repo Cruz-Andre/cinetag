@@ -15,7 +15,7 @@
 ## TODO
 ~~- Ajustar a responsividade mobile~~ :white_check_mark:
 
-### Vercel Pages: em breve
+### Vercel Pages: https://cinetag-pearl.vercel.app/
 
 
 # Getting Started with Create React App
