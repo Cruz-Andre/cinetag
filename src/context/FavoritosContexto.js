@@ -27,7 +27,8 @@ export function useFavoritoContext() {
       return setFavorito(novaLista)
     }
 
-    novaLista.splice(novaLista.indexOf(novoFavorito), 1)
+    //novaLista.splice(novaLista.indexOf(novoFavorito), 1) ver ====> https://cursos.alura.com.br/course/react-praticando-react-js/task/120506
+    novaLista = favorito.filter(fav => fav.id !== novoFavorito.id)
 
     return setFavorito(novaLista)
   }
